@@ -9,8 +9,8 @@ window.onload = function () {
 
     const participantNames = []
 
-    inp.addEventListener('keypress', function (event) {
-        if (event.key === 'Enter') {
+    inp.addEventListener('change', function (event) {
+        
             let newNames = event.target.value.split(', ')
             if (newNames[0] !== '') {
                 newNames.forEach(name => {
@@ -19,7 +19,7 @@ window.onload = function () {
                     nameList.appendChild(item)
                 })
             }
-        }
+       
     })
 
     giveATry.addEventListener('click', function () {
